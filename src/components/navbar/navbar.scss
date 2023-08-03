@@ -1,0 +1,51 @@
+.navbarContainer {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  color: var(--darkGrey);
+
+  .navbarLeft {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 1rem;
+
+    .myIcon {
+      width: 50px;
+    }
+
+    .myIcon:hover {
+      cursor: pointer;
+    }
+    .name {
+      font-size: 35px;
+      font-weight: bold;
+      color: var(--green);
+      margin-right: 25px;
+    }
+    .name:hover {
+      cursor: pointer;
+    }
+  }
+
+  .navbarRight {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+
+    .navbarList {
+      flex: 7;
+      ul {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+
+        li:hover {
+          cursor: pointer;
+          color: var(--gold);
+        }
+      }
+    }
+  }
+}
