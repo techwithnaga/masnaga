@@ -2,26 +2,29 @@
   --yellow: #f5c32c;
   --orange: #fca61f;
   --black: #242d49;
-  --gray: #788097;
+  --grey: #788097;
   --blueCard: #ddf8fe;
   --purple: rgb(238 210 255);
   --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%);
   --orangeCard: rgba(252, 166, 31, 0.45);
   --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
-
   --green: #174333;
+  --lightGreen: #5c7b70;
+  --lighterGreen: #8ba199;
 
   --darkGray: #0c2521;
   --lighterGold: #eea736;
   --gold: #c2882b;
   --brown: #7b3400;
+
+  --rice: #fbfcf8;
 }
 body {
   margin: 0;
+  color: var(--green);
 }
 
 .app {
-  padding: 0.5rem 3.5rem;
   overflow: hidden;
   color: var(--black);
 }
@@ -37,6 +40,7 @@ body {
     var(--lighterGold) 26.71%,
     var(--gold) 99.36%
   );
+  border: 1px solid transparent;
   box-shadow: 0px 20px 24px 3px rgba(251, 161, 40, 0.42);
 }
 
@@ -45,4 +49,61 @@ body {
   cursor: pointer;
   color: var(--gold);
   border: 1px solid var(--gold);
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-weight: 600;
+  font-size: 49px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 39px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+h3 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-weight: 600;
+  font-size: 31px;
+}
+
+h4 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+h5 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+h6 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+label {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-weight: 400;
+  font-size: 12px;
 }

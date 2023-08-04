@@ -1,122 +1,221 @@
-.introContainer {
+.intro {
+  width: 100%;
+  height: 57rem;
   display: flex;
-  height: 74vh;
-  margin-top: 6rem;
+  justify-content: center;
+  // border: 1px solid red;
 
-  .introLeft {
+  .introContainer {
+    width: 75rem;
     display: flex;
-    flex: 1;
-    flex-direction: column;
-    gap: 3.5rem;
 
-    .introName {
+    .introLeft {
       display: flex;
+      flex: 1;
       flex-direction: column;
-      gap: 0.7rem;
-      padding-left: 70px;
+      gap: 5rem;
+      padding-top: 12rem;
 
-      .title {
+      .introName {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+
+        .title {
+          color: var(--green);
+          font-size: 2rem;
+          font-weight: 100;
+          display: inline;
+        }
+
+        .ityped-cursor {
+          font-size: 2.2rem;
+          opacity: 1;
+          -webkit-animation: blink 0.3s infinite;
+          -moz-animation: blink 0.3s infinite;
+          animation: blink 0.3s infinite;
+          animation-direction: alternate;
+        }
+
+        @keyframes blink {
+          100% {
+            opacity: 0;
+          }
+        }
+
+        @-webkit-keyframes blink {
+          100% {
+            opacity: 0;
+          }
+        }
+
+        @-moz-keyframes blink {
+          100% {
+            opacity: 0;
+          }
+        }
+      }
+
+      .introName > :nth-child(1) {
         color: var(--green);
-        font-size: 2rem;
         font-weight: 100;
-        display: inline;
-      }
-
-      .ityped-cursor {
-        font-size: 2.2rem;
-        opacity: 1;
-        -webkit-animation: blink 0.3s infinite;
-        -moz-animation: blink 0.3s infinite;
-        animation: blink 0.3s infinite;
-        animation-direction: alternate;
-      }
-
-      @keyframes blink {
-        100% {
-          opacity: 0;
-        }
-      }
-
-      @-webkit-keyframes blink {
-        100% {
-          opacity: 0;
-        }
-      }
-
-      @-moz-keyframes blink {
-        100% {
-          opacity: 0;
-        }
-      }
-    }
-
-    .introName > :nth-child(1) {
-      color: var(--green);
-      font-weight: 100;
-      font-size: 1.5rem;
-    }
-    .introName > :nth-child(2) {
-      color: var(--gold);
-      font-weight: bold;
-      font-size: 3.5rem;
-    }
-
-    .introButton {
-      width: 6rem;
-      height: 2rem;
-    }
-
-    .introIcons {
-      display: flex;
-      gap: 2rem;
-      padding-left: 70px;
-
-      .icon {
         font-size: 1.5rem;
+      }
+      .introName > :nth-child(2) {
         color: var(--gold);
+        font-weight: bold;
+        font-size: 3.5rem;
+      }
+      .introName > :nth-child(4) {
+        color: var(--grey);
+        font-weight: 100;
+        width: 90%;
+        font-size: 14px;
       }
 
-      .icon:hover {
-        cursor: pointer;
-        color: var(--green);
+      .introButton {
+        width: 6rem;
+        height: 2rem;
+      }
+
+      .introIcons {
+        display: flex;
+        gap: 2rem;
+
+        .icon {
+          font-size: 1.5rem;
+          color: var(--gold);
+        }
+
+        .icon:hover {
+          cursor: pointer;
+          color: var(--green);
+        }
       }
     }
-  }
 
-  .introRight {
-    flex: 1;
-    position: relative;
-
-    .blur1 {
-      width: 30rem;
-      height: 14rem;
-      background-color: var(--green);
-      border-radius: 50%;
-      filter: blur(232px);
+    .introRight {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      position: relative;
       z-index: -9;
-      top: -18%;
-      left: 43%;
+
+      .bg {
+        -webkit-clip-path: polygon(
+          20% 0%,
+          80% 0%,
+          100% 20%,
+          100% 80%,
+          80% 100%,
+          20% 100%,
+          0% 80%,
+          0% 20%
+        );
+        clip-path: polygon(
+          20% 0%,
+          80% 0%,
+          100% 20%,
+          100% 80%,
+          80% 100%,
+          20% 100%,
+          0% 80%,
+          0% 20%
+        );
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: local;
+        width: 20rem;
+        height: 25rem;
+        max-height: 45rem;
+        position: absolute;
+        top: 10rem;
+      }
+
+      .myPic {
+        width: 100%;
+        max-height: 45rem;
+      }
+
+      .blur1 {
+        position: absolute;
+        width: 20rem;
+        height: 12rem;
+        background-color: var(--lighterGreen);
+        border-radius: 50%;
+        filter: blur(190px);
+        z-index: -9;
+        right: -5%;
+        top: 12rem;
+      }
+
+      .blur2 {
+        position: absolute;
+        width: 20rem;
+        height: 12rem;
+        background-color: var(--brown);
+        border-radius: 50%;
+        filter: blur(252px);
+        z-index: -9;
+        top: 20rem;
+        left: -35%;
+      }
+
+      .floatingDiv1 {
+        position: absolute;
+        top: 10rem;
+        left: 0;
+      }
+
+      .floatingDiv2 {
+        position: absolute;
+        top: 20rem;
+        right: 0;
+      }
+
+      .floatingDiv3 {
+        position: absolute;
+        top: 30rem;
+        left: 0;
+      }
     }
 
-    .blur2 {
-      width: 42rem;
-      height: 10rem;
-      background-color: var(--brown);
-      border-radius: 50%;
-      filter: blur(232px);
-      z-index: -9;
-      bottom: 28%;
-      left: -38%;
-    }
-  }
-  .introRight > * {
-    position: absolute;
-    z-index: 1;
-  }
-  .introRight > img {
-    border-radius: 50%;
-    position: absolute;
-    right: 35%;
-    top: -5%;
+    // .introRight {
+    //   flex: 1;
+    //   position: relative;
+
+    //   .blur1 {
+    //     width: 30rem;
+    //     height: 14rem;
+    //     background-color: var(--green);
+    //     border-radius: 50%;
+    //     filter: blur(232px);
+    //     z-index: -9;
+    //     top: -18rem;
+    //     left: 43rem;
+    //   }
+
+    //   .blur2 {
+    //     width: 42rem;
+    //     height: 10rem;
+    //     background-color: var(--brown);
+    //     border-radius: 50%;
+    //     filter: blur(232px);
+    //     z-index: -9;
+    //     bottom: 28px;
+    //     left: -38px;
+    //   }
+    // }
+    // .introRight > * {
+    //   position: absolute;
+    //   z-index: 1;
+    // }
+    // .introRight > img {
+    //   border-radius: 50%;
+    //   position: absolute;
+    //   right: 35rem;
+    //   top: -5rem;
+    // }
   }
 }

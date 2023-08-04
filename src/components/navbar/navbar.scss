@@ -1,49 +1,61 @@
-.navbarContainer {
-  height: 10vh;
+.navBar {
   display: flex;
-  justify-content: space-between;
-  color: var(--darkGrey);
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  background-color: transparent;
+  width: 100%;
 
-  .navbarLeft {
+  .navbarContainer {
+    width: 75rem;
+    height: 5rem;
     display: flex;
-    flex: 1;
-    align-items: center;
-    gap: 1rem;
+    justify-content: space-between;
+    color: var(--darkGrey);
 
-    .myIcon {
-      width: 50px;
+    .navbarLeft {
+      display: flex;
+      flex: 2;
+      align-items: center;
+      gap: 0.5rem;
+      justify-content: left;
+      width: 40%;
+
+      .myIcon {
+        // width: 25%;
+      }
+
+      .myIcon:hover {
+        cursor: pointer;
+      }
+      .name {
+        font-size: 35px;
+        font-weight: bold;
+        color: var(--green);
+        margin-right: 25px;
+      }
+      .name:hover {
+        cursor: pointer;
+      }
     }
 
-    .myIcon:hover {
-      cursor: pointer;
-    }
-    .name {
-      font-size: 35px;
-      font-weight: bold;
-      color: var(--green);
-      margin-right: 25px;
-    }
-    .name:hover {
-      cursor: pointer;
-    }
-  }
+    .navbarRight {
+      display: flex;
+      flex: 10;
+      align-items: center;
+      justify-content: right;
+      gap: 1rem;
 
-  .navbarRight {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-
-    .navbarList {
-      flex: 7;
-      ul {
-        display: flex;
-        gap: 2rem;
-        list-style: none;
-
-        li:hover {
-          cursor: pointer;
-          color: var(--gold);
+      .navbarList {
+        ul {
+          display: flex;
+          gap: 2rem;
+          list-style: none;
+          margin-right: 2rem;
+          li:hover {
+            cursor: pointer;
+            color: var(--gold);
+          }
         }
       }
     }
