@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="navbarContainer">
         <div className="navbarLeft">
           {/* <img className="myIcon" src={myIcon} alt="my icon" /> */}
-          <div className="name">Masnaga</div>
+          <div className="name">M</div>
           <span>toggle</span>
         </div>
         <div className="navbarRight">
@@ -21,7 +21,7 @@ const Navbar = () => {
               <li>Testimonial</li>
             </ul>
           </div>
-          <button className="button">Contact</button>
+          <button className="goldButton">Contact</button>
         </div>
       </div>
     </nav>

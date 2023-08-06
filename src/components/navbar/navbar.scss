@@ -7,11 +7,13 @@
   width: 100%;
 
   .navbarContainer {
-    width: 75rem;
+    width: 100%;
+    max-width: 100rem;
     height: 5rem;
     display: flex;
     justify-content: space-between;
     color: var(--darkGrey);
+    padding: 0 3rem;
 
     .navbarLeft {
       display: flex;

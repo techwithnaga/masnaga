@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 :root {
   --yellow: #f5c32c;
   --orange: #fca61f;
@@ -11,13 +13,16 @@
   --green: #174333;
   --lightGreen: #5c7b70;
   --lighterGreen: #8ba199;
-
   --darkGray: #0c2521;
   --lighterGold: #eea736;
   --gold: #c2882b;
   --brown: #7b3400;
-
   --rice: #fbfcf8;
+}
+
+* {
+  font-family: "League Spartan", sans-serif;
+  font-size: 20px;
 }
 body {
   margin: 0;
@@ -29,7 +34,7 @@ body {
   color: var(--black);
 }
 
-.button {
+/* .button {
   border-radius: 34px;
   border: none;
   color: white;
@@ -42,7 +47,7 @@ body {
   );
   border: 1px solid transparent;
   box-shadow: 0px 20px 24px 3px rgba(251, 161, 40, 0.42);
-}
+} */
 
 .button:hover {
   background: white;
@@ -52,16 +57,38 @@ body {
   box-sizing: border-box;
 }
 
+.goldButton {
+  padding: 15px;
+  font-size: 20px;
+  border: 1px solid var(--gold);
+  background-color: transparent;
+  color: var(--gold);
+  font-stretch: 0%;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  cursor: pointer;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.goldButton:hover {
+  transform: translate(-5px, -5px);
+  border-bottom: 2px solid var(--gold);
+  box-shadow: 10px 10px 5px 0px rgba(194, 136, 43, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(194, 136, 43, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(194, 136, 43, 0.75);
+}
+
 h1 {
   margin-block-start: 0;
   margin-block-end: 0;
-  font-weight: 600;
-  font-size: 49px;
+  font-weight: 700;
+  font-size: 6rem;
 }
 
 h2 {
   font-weight: 600;
-  font-size: 39px;
+  font-size: 5rem;
   margin-block-start: 0;
   margin-block-end: 0;
 }
@@ -70,40 +97,40 @@ h3 {
   margin-block-start: 0;
   margin-block-end: 0;
   font-weight: 600;
-  font-size: 31px;
+  font-size: 4rem;
 }
 
 h4 {
   margin-block-start: 0;
   margin-block-end: 0;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 3rem;
 }
 
 h5 {
   margin-block-start: 0;
   margin-block-end: 0;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 h6 {
   margin-block-start: 0;
   margin-block-end: 0;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 p {
   margin-block-start: 0;
   margin-block-end: 0;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 label {
   margin-block-start: 0;
   margin-block-end: 0;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
 }

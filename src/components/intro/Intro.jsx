@@ -20,33 +20,43 @@ const Intro = () => {
       backSpeed: 35,
       backDelay: 1000,
       typeSpeed: 60,
-      strings: ["Full Stack Web Developer", "Software Engineer", "Co-Founder"],
+      strings: [
+        "Full Stack Web Developer.",
+        "Software Engineer.",
+        "Co-Founder.",
+      ],
     });
   }, []);
 
   return (
     <div className="intro">
       <div className="introContainer">
-        <div className="introLeft">
-          <div className="introName">
-            <span>Hello, My name is </span>
-            <span>Masnaga</span>
-            <div>
-              <span className="title">I'm a </span>
-              <span ref={txtRef} className="title"></span>
-            </div>
-            <p>
-              I design and develop scalable web applications, improving company
-              efficieny and productiviy.
-            </p>
-          </div>
-          {/* <button className="button introButton"> Hire Me</button> */}
-
-          <div className="introIcons">
+        <div className="iconsHz">
+          <div className="icons">
             <BsGithub className="icon"></BsGithub>
             <BsLinkedin className="icon"></BsLinkedin>
             <BsTwitter className="icon"> </BsTwitter>
           </div>
+          <div className="line"></div>
+        </div>
+        <div className="introLeft">
+          <div className="introName">
+            <h6>Hi, my name is </h6>
+            <h1>Masnaga.</h1>
+            <div>
+              <h5 className="title">I'm a </h5>
+              <h5 ref={txtRef} className="title"></h5>
+            </div>
+            {/* <p>
+              I design and develop scalable web applications, improving company
+              efficieny and productiviy.
+            </p> */}
+          </div>
+          <div className="buttonContainer">
+            <button className="goldButton">About Me</button>
+          </div>
+
+          {/* <button className="button introButton"> Hire Me</button> */}
         </div>
         <div className="introRight">
           <div
@@ -55,11 +65,7 @@ const Intro = () => {
           ></div>
 
           <div className="floatingDiv1">
-            <FloatingDiv
-              image={crown}
-              txt1="2023 Top"
-              txt2="Developer"
-            ></FloatingDiv>
+            <FloatingDiv image={crown} txt1="Web" txt2="Builder"></FloatingDiv>
           </div>
           <div className="floatingDiv2">
             <FloatingDiv image={thumbup} txt1="Cum" txt2="Laude"></FloatingDiv>

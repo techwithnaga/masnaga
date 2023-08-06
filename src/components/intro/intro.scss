@@ -6,8 +6,44 @@
   // border: 1px solid red;
 
   .introContainer {
-    width: 75rem;
+    width: 100%;
+    max-width: 100rem;
     display: flex;
+    padding: 0 8rem;
+
+    .iconsHz {
+      position: fixed;
+      bottom: 0;
+      left: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+      .line {
+        height: 10vh;
+        background-color: var(--green);
+        width: 2px;
+      }
+
+      .icons {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .icon {
+          font-size: 1.3rem;
+          color: var(--green);
+          transition: transform 0.3s ease-out;
+        }
+
+        .icon:hover {
+          cursor: pointer;
+          color: var(--gold);
+          transform: translate(0, -7px);
+        }
+      }
+    }
 
     .introLeft {
       display: flex;
@@ -16,15 +52,21 @@
       gap: 5rem;
       padding-top: 12rem;
 
+      .buttonContainer {
+        width: 100%;
+      }
+
+      .aboutMeBtn {
+        text-transform: uppercase;
+      }
+
       .introName {
         display: flex;
         flex-direction: column;
-        gap: 0.7rem;
+        gap: 1.5rem;
 
         .title {
           color: var(--green);
-          font-size: 2rem;
-          font-weight: 100;
           display: inline;
         }
 
@@ -58,39 +100,9 @@
 
       .introName > :nth-child(1) {
         color: var(--green);
-        font-weight: 100;
-        font-size: 1.5rem;
       }
       .introName > :nth-child(2) {
         color: var(--gold);
-        font-weight: bold;
-        font-size: 3.5rem;
-      }
-      .introName > :nth-child(4) {
-        color: var(--grey);
-        font-weight: 100;
-        width: 90%;
-        font-size: 14px;
-      }
-
-      .introButton {
-        width: 6rem;
-        height: 2rem;
-      }
-
-      .introIcons {
-        display: flex;
-        gap: 2rem;
-
-        .icon {
-          font-size: 1.5rem;
-          color: var(--gold);
-        }
-
-        .icon:hover {
-          cursor: pointer;
-          color: var(--green);
-        }
       }
     }
 
