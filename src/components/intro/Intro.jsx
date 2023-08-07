@@ -31,7 +31,7 @@ const Intro = () => {
   return (
     <div className="intro">
       <div className="introContainer">
-        <div className="iconsHz">
+        <div className="iconsVertical">
           <div className="icons">
             <BsGithub className="icon"></BsGithub>
             <BsLinkedin className="icon"></BsLinkedin>
@@ -81,43 +81,12 @@ const Intro = () => {
 
           <div className="blur1"></div>
           <div className="blur2"></div>
-
-          {/* <img
-            style={{
-              right: "18%",
-              top: "-29%",
-              transform: "scale(1.11)",
-              zIndex: "-1",
-            }}
-            src={blob2}
-          />
-
-          <img src={profilePicNoBg} style={{ scale: "1.2" }}></img>
-
-          <div style={{ right: "13rem", top: "9rem" }}>
-            <FloatingDiv
-              image={crown}
-              txt1="Web"
-              txt2="Developer"
-            ></FloatingDiv>
-          </div>
-          <div style={{ top: "43rem" }}>
-            <FloatingDiv
-              image={diploma}
-              txt1="Master in"
-              txt2="Computer Science"
-            ></FloatingDiv>
-          </div>
-          <div style={{ left: "5rem", top: "-3rem" }}>
-            <FloatingDiv
-              image={thumbup}
-              txt1="Software"
-              txt2="Engineer"
-            ></FloatingDiv>
-          </div>
-
-          <div className="blur1"></div>
-          <div className="blur2"></div> */}
+        </div>
+        <div className="emailVertical">
+          <a className="email" href="mailto:techwithnaga@gmail">
+            techwithnaga@gmail.com
+          </a>
+          <div className="line"></div>
         </div>
       </div>
     </div>

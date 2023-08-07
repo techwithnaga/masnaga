@@ -47,6 +47,10 @@
       align-items: center;
       justify-content: right;
       gap: 1rem;
+      .contactBtn {
+        font-size: 16px;
+        letter-spacing: 1.5px;
+      }
 
       .navbarList {
         ul {
@@ -54,10 +58,29 @@
           gap: 2rem;
           list-style: none;
           margin-right: 2rem;
-          li:hover {
-            cursor: pointer;
-            color: var(--gold);
+
+          li {
+            font-family: var(--font-mono);
+            font-size: 16px;
+            color: var(--green);
+            padding-bottom: 5px;
+            border: 1px solid transparent;
           }
+        }
+        li:hover {
+          cursor: pointer;
+          color: var(--brown);
+          border-bottom: 1px solid var(--brown);
+          // animation: growLine 0.75s 1s;
+
+          // @keyframes growLine {
+          //   0% {
+          //     width: 0;
+          //   }
+          //   100% {
+          //     width: 100%;
+          //   }
+          // }
         }
       }
     }

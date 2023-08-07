@@ -15,13 +15,13 @@ const Navbar = () => {
           <div className="navbarList">
             <ul>
               <li>Home</li>
-              <li>Skills</li>
+              <li>About</li>
               <li>Portfolio</li>
               <li>Blogs</li>
               <li>Testimonial</li>
             </ul>
           </div>
-          <button className="goldButton">Contact</button>
+          <button className="goldButton contactBtn">Contact</button>
         </div>
       </div>
     </nav>
