@@ -1,15 +1,61 @@
 .intro {
   width: 100%;
-  height: 57rem;
-  display: flex;
-  justify-content: center;
+  height: 100vh;
+
   // border: 1px solid red;
 
   .introContainer {
     width: 100%;
-    max-width: 100rem;
+    height: 100vh;
     display: flex;
-    padding: 0 8rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    #logo {
+      position: absolute;
+      top: 35%;
+      left: 43%;
+      width: 250px;
+      height: 250px;
+      stroke: var(--gold);
+      fill: var(--gold);
+      stroke-dasharray: 150;
+      stroke-dashoffset: 150;
+      animation: logoFrames 4s ease-in forwards;
+      z-index: 3;
+    }
+
+    @keyframes logoFrames {
+      0% {
+        stroke-dashoffset: 150;
+        fill: transparent;
+        scale: 1;
+        top: 35%;
+        left: 43%;
+      }
+      40% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+        scale: 1;
+        top: 35%;
+        left: 43%;
+      }
+      70% {
+        stroke-dashoffset: 0;
+        fill: var(--gold);
+        scale: 1;
+        top: 35%;
+        left: 43%;
+      }
+      100% {
+        stroke-dashoffset: 0;
+        fill: var(--gold);
+        scale: 0;
+        top: -8%;
+        left: -2%;
+      }
+    }
 
     .iconsVertical {
       position: fixed;
@@ -22,7 +68,7 @@
 
       .line {
         height: 6rem;
-        background-color: var(--green);
+        background-color: var(--grey);
         width: 2px;
       }
 
@@ -33,24 +79,26 @@
 
         .icon {
           font-size: 1.3rem;
-          color: var(--green);
+          color: var(--grey);
           transition: transform 0.3s ease-out;
-        }
 
-        .icon:hover {
-          cursor: pointer;
-          color: var(--gold);
-          transform: translate(0, -7px);
+          &:hover {
+            cursor: pointer;
+            fill: var(--gold);
+            transform: translate(0, -7px);
+          }
         }
       }
     }
 
-    .introLeft {
+    .introNameContainer {
       display: flex;
-      flex: 1;
+      height: 30rem;
+      width: 65rem;
       flex-direction: column;
       gap: 5rem;
       padding-top: 12rem;
+      margin-left: 20rem;
 
       .buttonContainer {
         width: 100%;
@@ -66,7 +114,7 @@
         gap: 1.5rem;
 
         .title {
-          color: var(--green);
+          color: var(--grey);
           display: inline;
         }
 
@@ -99,10 +147,10 @@
       }
 
       .introName > :nth-child(1) {
-        color: var(--green);
+        color: var(--gold);
       }
       .introName > :nth-child(2) {
-        color: var(--gold);
+        color: var(--white);
       }
     }
 
@@ -207,7 +255,7 @@
         font-family: var(--font-mono);
         letter-spacing: 2px;
         text-decoration: none;
-        color: var(--green);
+        color: var(--grey);
         transition: transform 0.3s ease-out;
       }
       .email:hover {
@@ -219,7 +267,7 @@
 
       .line {
         height: 2px;
-        background-color: var(--green);
+        background-color: var(--grey);
         width: 6rem;
       }
     }

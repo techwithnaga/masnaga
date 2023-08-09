@@ -1,27 +1,78 @@
 import React from "react";
 import "./navbar.scss";
-import myIcon from "../../img/myIcon.png";
+import logo from "../../img/MLogo.svg";
+
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
     <nav className="navBar">
       <div className="navbarContainer">
         <div className="navbarLeft">
-          {/* <img className="myIcon" src={myIcon} alt="my icon" /> */}
-          <div className="name">M</div>
-          <span>toggle</span>
+          <motion.img
+            className="myLogo"
+            src={logo}
+            alt="my icon"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2, delay: 4 }}
+          />
+
+          {/* <span>toggle</span> */}
         </div>
         <div className="navbarRight">
           <div className="navbarList">
             <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Portfolio</li>
-              <li>Blogs</li>
-              <li>Testimonial</li>
+              <motion.li
+                animate={{ y: 0 }}
+                initial={{ y: -100 }}
+                transition={{ delay: 4.1, duration: 0.7 }}
+              >
+                <label className="number">01. </label>
+                Home
+              </motion.li>
+              <motion.li
+                animate={{ y: 0 }}
+                initial={{ y: -100 }}
+                transition={{ delay: 4.2, duration: 0.7 }}
+              >
+                <label className="number">02. </label>
+                About
+              </motion.li>
+              <motion.li
+                animate={{ y: 0 }}
+                initial={{ y: -100 }}
+                transition={{ delay: 4.3, duration: 0.7 }}
+              >
+                <label className="number">03. </label>
+                Portfolio
+              </motion.li>
+              <motion.li
+                animate={{ y: 0 }}
+                initial={{ y: -100 }}
+                transition={{ delay: 4.4, duration: 0.7 }}
+              >
+                <label className="number">04. </label>
+                Blogs
+              </motion.li>
+              <motion.li
+                animate={{ y: 0 }}
+                initial={{ y: -100 }}
+                transition={{ delay: 4.5, duration: 0.7 }}
+              >
+                <label className="number">05. </label>
+                Testimonial
+              </motion.li>
             </ul>
           </div>
-          <button className="goldButton contactBtn">Contact</button>
+          <motion.button
+            animate={{ y: 0 }}
+            initial={{ y: -100 }}
+            transition={{ duration: 0.7, delay: 4.6 }}
+            className="goldButton resumeBtn"
+          >
+            Resume
+          </motion.button>
         </div>
       </div>
     </nav>

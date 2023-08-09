@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@300;400;500&display=swap");
 
 :root {
   --yellow: #f5c32c;
@@ -15,16 +15,33 @@
   --lighterGreen: #8ba199;
   --darkGray: #0c2521;
   --lighterGold: #eea736;
-  --gold: #c2882b;
+  --gold: #ffdd43;
   --brown: #7b3400;
   --rice: #fbfcf8;
+  --lightBlue: #2e9cca;
   --font-spartan: "League Spartan", sans-serif;
-  --font-mono: "Space Mono", monospace;
+  --font-mono: "Roboto Mono", monospace;
+
+  --darkerNavy: #09162d;
+  --darkNavy: #112240;
+  --navy: #112240;
+  --lightNavy: #253552;
+  --lighterNavy: #3a4964;
+
+  --white: #e4e6eb;
+  --darkWhite: #caced6;
+
+  --lightGrey: #b0b7c2;
+  --grey: #97a0af;
 }
 
 * {
   font-family: "League Spartan", sans-serif;
-  font-size: 20px;
+  font-size: 22px;
+  color: var(--grey);
+  background-color: var(--darkerNavy);
+  letter-spacing: 1.3px;
+  line-height: 1.2;
 }
 body {
   margin: 0;
@@ -33,7 +50,6 @@ body {
 
 .app {
   overflow: hidden;
-  color: var(--black);
 }
 
 /* .button {
@@ -90,7 +106,7 @@ h1 {
 
 h2 {
   font-weight: 600;
-  font-size: 5rem;
+  font-size: 3rem;
   margin-block-start: 0;
   margin-block-end: 0;
 }
@@ -99,27 +115,27 @@ h3 {
   margin-block-start: 0;
   margin-block-end: 0;
   font-weight: 600;
-  font-size: 4rem;
+  font-size: 2.5rem;
 }
 
 h4 {
   margin-block-start: 0;
   margin-block-end: 0;
   font-weight: 600;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 h5 {
   margin-block-start: 0;
   margin-block-end: 0;
-  font-weight: 600;
-  font-size: 2rem;
+  font-weight: 500;
+  font-size: 1.5rem;
 }
 
 h6 {
   margin-block-start: 0;
   margin-block-end: 0;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1rem;
 }
 

@@ -1,0 +1,66 @@
+.aboutMe {
+  width: 100%;
+  height: 100vh;
+  max-height: 80rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+
+  .aboutMeContainer {
+    width: 60rem;
+    // background-color: pink;
+    display: flex;
+
+    .contentLeft {
+      padding: 1rem;
+      .header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .title {
+          font-family: var(--font-mono);
+
+          .number {
+            margin-right: 10px;
+            color: var(--gold);
+          }
+        }
+        .line {
+          height: 1px;
+          flex: 2;
+          margin-left: 10px;
+          background-color: var(--green);
+        }
+      }
+
+      .paragraph {
+        margin-top: 1.5rem;
+        line-height: 1.2;
+      }
+
+      .gridContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-content: space-evenly;
+        // background-color: red;
+        margin-top: 1rem;
+        width: 80%;
+        .gridItem {
+          padding: 0.5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 6px;
+
+          .icon {
+            width: 2rem;
+            height: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
