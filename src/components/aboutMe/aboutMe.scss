@@ -5,15 +5,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid red;
+  // border: 1px solid red;
 
   .aboutMeContainer {
-    width: 60rem;
+    width: 70rem;
     // background-color: pink;
     display: flex;
 
     .contentLeft {
-      padding: 1rem;
+      padding: 2rem;
+      flex: 2;
+      // border: 1px solid white;
       .header {
         display: flex;
         align-items: center;
@@ -21,6 +23,7 @@
 
         .title {
           font-family: var(--font-mono);
+          color: var(--lightGrey);
 
           .number {
             margin-right: 10px;
@@ -31,22 +34,25 @@
           height: 1px;
           flex: 2;
           margin-left: 10px;
-          background-color: var(--green);
+          background-color: var(--darkGrey);
+          opacity: 0.6;
         }
       }
 
       .paragraph {
-        margin-top: 1.5rem;
+        padding: 1.8rem 0 0 1.8rem;
         line-height: 1.2;
       }
 
       .gridContainer {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         align-content: space-evenly;
         // background-color: red;
         margin-top: 1rem;
-        width: 80%;
+        row-gap: 15px;
+        width: 100%;
+
         .gridItem {
           padding: 0.5rem;
           display: flex;
@@ -58,6 +64,66 @@
           .icon {
             width: 2rem;
             height: 2rem;
+          }
+        }
+      }
+    }
+
+    .contentRight {
+      flex: 1;
+
+      .photoWrapper {
+        // box-sizing: border-box;
+        margin: auto;
+        width: 16rem;
+        height: 16rem;
+        margin-top: 3rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        border-radius: 5px;
+
+        &::before {
+          content: "";
+          border: 2px solid var(--gold);
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 14px;
+          left: 14px;
+          border-radius: 5px;
+        }
+        .photo {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+          border-radius: 5px;
+
+          &:hover::after {
+            animation: removeCover 1s ease-out forwards;
+
+            @keyframes removeCover {
+              0% {
+                opacity: 0.3;
+              }
+              100% {
+                opacity: 0;
+              }
+            }
+          }
+
+          &::after {
+            content: "";
+            background-color: var(--gold);
+            opacity: 0.3;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 5px;
           }
         }
       }

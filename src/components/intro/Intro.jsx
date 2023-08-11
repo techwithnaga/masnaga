@@ -43,8 +43,8 @@ const Intro = () => {
         </svg>
         <motion.div
           className="iconsVertical"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
           transition={{ duration: 1.2, delay: 6 }}
         >
           <div className="icons">
@@ -55,15 +55,27 @@ const Intro = () => {
           <div className="line"></div>
         </motion.div>
         <div className="introNameContainer">
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, delay: 5.1 }}
-            className="introName"
-          >
-            <h6>Hi, my name is </h6>
-            <h1>Masnaga.</h1>
-            <div>
+          <div className="introName">
+            <motion.h6
+              initial={{ opacity: 0, y: 70 }}
+              animate={{ opacity: 1, y: 0 }}
+              // transition={{ duration: 0.5, delay: 5.1 }}
+              transition={{ duration: 0.5, delay: 5 }}
+            >
+              Hi, my name is{" "}
+            </motion.h6>
+            <motion.h1
+              initial={{ opacity: 0, y: 70 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 5.3 }}
+            >
+              Masnaga.
+            </motion.h1>
+            <motion.div
+              initial={{ opacity: 0, y: 70 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 5.6 }}
+            >
               <h5 className="title">I'm a </h5>
 
               <h5 ref={txtRef} className="title"></h5>
@@ -74,19 +86,19 @@ const Intro = () => {
                 customer-centered products at
                 <span style={{ color: "var(--gold)" }}>Cinchy</span>
               </p> */}
-            </div>
+            </motion.div>
             {/* <p>
               I design and develop scalable web applications, improving company
               efficieny and productiviy.
             </p> */}
-          </motion.div>
+          </div>
 
           <div className="buttonContainer">
             <motion.button
               className="goldButton"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1.2, delay: 5.5 }}
+              transition={{ duration: 0.5, delay: 5.9 }}
             >
               About Me
             </motion.button>
@@ -98,7 +110,7 @@ const Intro = () => {
           className="emailVertical"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1.2, delay: 6 }}
+          transition={{ duration: 1.2, delay: 7 }}
         >
           <a className="email" href="mailto:techwithnaga@gmail">
             techwithnaga@gmail.com

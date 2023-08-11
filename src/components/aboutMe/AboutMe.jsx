@@ -1,25 +1,35 @@
 import React from "react";
 import "./aboutMe.scss";
 import profilePic from "../../img/profilePic.png";
-
-import { FaCss3Alt, FaReact, FaHtml5 } from "react-icons/fa6";
+import { FaCss3Alt, FaReact, FaHtml5, FaNodeJs } from "react-icons/fa6";
 import viteIcon from "../../img/vite.svg";
 import { IoLogoJavascript } from "react-icons/io5";
-import { SiApollographql, SiRedux } from "react-icons/si";
+import { SiApollographql, SiRedux, SiGraphql, SiMongodb } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const AboutMe = () => {
   return (
     <div className="aboutMe">
       <div className="aboutMeContainer">
         <div className="contentLeft">
-          <div className="header">
-            <h5 className="title">
+          <motion.div
+            className="header"
+            initial={{ y: 70, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <motion.h5 className="title">
               <span className="number">01.</span>About Me
-            </h5>
+            </motion.h5>
             <div className="line"></div>
-          </div>
+          </motion.div>
 
-          <div className="paragraph">
+          <motion.div
+            className="paragraph"
+            initial={{ y: 70, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
             <p>
               Hello! My Name is Masnaga and I am a software engineer
               specializing in developing scalable web applications. I enjoy
@@ -32,7 +42,7 @@ const AboutMe = () => {
               Fast-forward to today, and I've earned Master of Science in
               Computer Science and had the privilage of working at one of the
               best hospital in Chicago,a start-up company. My main focus these
-              days is building a better digital experiences and developing admin
+              days is building excellent user experiences and developing admin
               dashboard at Cinchy.
             </p>
             <br />
@@ -40,52 +50,89 @@ const AboutMe = () => {
               Here are a few technologies I have been working with recently:
             </p>
             <br />
-          </div>
+          </motion.div>
 
-          <div className="gridContainer">
+          <motion.div
+            className="gridContainer"
+            initial={{ y: 70, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          >
             <div className="gridItem">
-              <FaReact className="icon" style={{ color: "#61DBFB" }}></FaReact>
-              <h6>React</h6>
+              <FaReact className="icon" style={{ fill: "#61DBFB" }}></FaReact>
+              <h6 className="text">React</h6>
             </div>
             <div className="gridItem">
               <img className="icon" src={viteIcon}></img>
-              <h6>Vite</h6>
+              <h6 className="text">Vite</h6>
             </div>
             <div className="gridItem">
-              <FaHtml5 className="icon" style={{ color: "#F16529" }}></FaHtml5>
-              <h6>HTML 5</h6>
+              <FaHtml5 className="icon" style={{ fill: "#F16529" }}></FaHtml5>
+
+              <h6 className="text">HTML 5</h6>
             </div>
             <div className="gridItem">
               <FaCss3Alt
                 className="icon"
-                style={{ color: "#2965f1" }}
+                style={{ fill: "#2965f1" }}
               ></FaCss3Alt>
-              <h6>CSS 3</h6>
+              <h6 className="text">CSS 3</h6>
             </div>
             <div className="gridItem">
               <IoLogoJavascript
                 className="icon"
-                style={{ color: "#F0DB4F" }}
+                style={{ fill: "#F0DB4F" }}
               ></IoLogoJavascript>
-              <h6>Javascript</h6>
+              <h6 className="text">Javascript</h6>
             </div>
             <div className="gridItem">
               <SiApollographql
                 className="icon"
-                style={{ color: "#78639a" }}
+                style={{ fill: "#78639a" }}
               ></SiApollographql>
-              <h6>Apollo</h6>
+              <h6 className="text">Apollo</h6>
             </div>
             <div className="gridItem">
-              <SiRedux className="icon" style={{ color: "#764abc" }}></SiRedux>
-              <h6>Redux</h6>
+              <SiRedux className="icon" style={{ fill: "#764abc" }}></SiRedux>
+              <h6 className="text">Redux</h6>
             </div>
-          </div>
+            <div className="gridItem">
+              <FaNodeJs className="icon" style={{ fill: "#215732" }}></FaNodeJs>
+              <h6 className="text">Node.js</h6>
+            </div>
+            <div className="gridItem">
+              <SiGraphql
+                className="icon"
+                style={{ fill: "#e535ab" }}
+              ></SiGraphql>
+              <h6 className="text">GraphQL</h6>
+            </div>
+            <div className="gridItem">
+              <SiMongodb
+                className="icon"
+                style={{ fill: "#4DB33D" }}
+              ></SiMongodb>
+              <h6 className="text">mongoDB</h6>
+            </div>
+          </motion.div>
         </div>
-        <div className="contentRight">
-          <div className="square"></div>
-          <img src={profilePic} alt="" />
-        </div>
+        <motion.div
+          className="contentRight"
+          initial={{ x: 150, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.9 }}
+        >
+          <motion.div
+            className="photoWrapper"
+            whileHover={{ x: 5, y: 5, transition: { duration: 0.1 } }}
+          >
+            <motion.div
+              className="photo"
+              style={{ backgroundImage: `url(${profilePic})` }}
+              whileHover={{ x: -5, y: -5, transition: { duration: 0.1 } }}
+            ></motion.div>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );

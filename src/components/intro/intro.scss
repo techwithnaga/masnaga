@@ -243,18 +243,19 @@
     .emailVertical {
       position: fixed;
       bottom: 0;
-      right: -8rem;
+      right: -5.5rem;
       display: flex;
-      gap: 2rem;
+      gap: 1rem;
       align-items: center;
       justify-content: center;
       transform: rotate(90deg);
-      margin-bottom: 10rem;
+      margin-bottom: 8.7rem;
 
       .email {
         font-family: var(--font-mono);
         letter-spacing: 2px;
         text-decoration: none;
+        font-size: 16px;
         color: var(--grey);
         transition: transform 0.3s ease-out;
       }
@@ -268,7 +269,7 @@
       .line {
         height: 2px;
         background-color: var(--grey);
-        width: 6rem;
+        width: 5.5rem;
       }
     }
 

@@ -29,7 +29,7 @@ const Navbar = () => {
                 transition={{ delay: 4.1, duration: 0.7 }}
               >
                 <label className="number">01. </label>
-                Home
+                About
               </motion.li>
               <motion.li
                 animate={{ y: 0 }}
@@ -37,7 +37,7 @@ const Navbar = () => {
                 transition={{ delay: 4.2, duration: 0.7 }}
               >
                 <label className="number">02. </label>
-                About
+                Experience
               </motion.li>
               <motion.li
                 animate={{ y: 0 }}
@@ -66,9 +66,9 @@ const Navbar = () => {
             </ul>
           </div>
           <motion.button
-            animate={{ y: 0 }}
-            initial={{ y: -100 }}
-            transition={{ duration: 0.7, delay: 4.6 }}
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            transition={{ duration: 1, delay: 4.8 }}
             className="goldButton resumeBtn"
           >
             Resume
