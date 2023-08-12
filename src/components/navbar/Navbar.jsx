@@ -37,7 +37,7 @@ const Navbar = () => {
                 transition={{ delay: 4.2, duration: 0.7 }}
               >
                 <label className="number">02. </label>
-                Experience
+                Qualification
               </motion.li>
               <motion.li
                 animate={{ y: 0 }}

@@ -1,0 +1,32 @@
+.experience {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  .experienceContainer {
+    width: 80rem;
+    max-width: 100rem;
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .title {
+        font-family: var(--font-mono);
+        color: var(--lightGrey);
+
+        .number {
+          margin-right: 10px;
+          color: var(--gold);
+        }
+      }
+      .line {
+        height: 1px;
+        flex: 2;
+        margin-left: 10px;
+        background-color: var(--darkGrey);
+        opacity: 0.6;
+      }
+    }
+  }
+}

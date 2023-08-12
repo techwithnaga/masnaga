@@ -1,10 +1,19 @@
 import React from "react";
 import "./aboutMe.scss";
 import profilePic from "../../img/profilePic.png";
-import { FaCss3Alt, FaReact, FaHtml5, FaNodeJs } from "react-icons/fa6";
+import {
+  FaCss3Alt,
+  FaReact,
+  FaHtml5,
+  FaNodeJs,
+  FaSass,
+  FaGithub,
+  FaGitAlt,
+} from "react-icons/fa6";
 import viteIcon from "../../img/vite.svg";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiApollographql, SiRedux, SiGraphql, SiMongodb } from "react-icons/si";
+import { TbBrandVscode } from "react-icons/tb";
 import { motion } from "framer-motion";
 
 const AboutMe = () => {
@@ -47,7 +56,8 @@ const AboutMe = () => {
             </p>
             <br />
             <p>
-              Here are a few technologies I have been working with recently:
+              Below are the skills, tools, and technologies I have been working
+              with recently:
             </p>
             <br />
           </motion.div>
@@ -60,59 +70,78 @@ const AboutMe = () => {
           >
             <div className="gridItem">
               <FaReact className="icon" style={{ fill: "#61DBFB" }}></FaReact>
-              <h6 className="text">React</h6>
+              <label className="text">React</label>
             </div>
             <div className="gridItem">
               <img className="icon" src={viteIcon}></img>
-              <h6 className="text">Vite</h6>
+              <label className="text">Vite</label>
             </div>
             <div className="gridItem">
               <FaHtml5 className="icon" style={{ fill: "#F16529" }}></FaHtml5>
 
-              <h6 className="text">HTML 5</h6>
+              <label className="text">HTML 5</label>
             </div>
             <div className="gridItem">
               <FaCss3Alt
                 className="icon"
                 style={{ fill: "#2965f1" }}
               ></FaCss3Alt>
-              <h6 className="text">CSS 3</h6>
+              <label className="text">CSS 3</label>
+            </div>
+            <div className="gridItem">
+              <FaSass className="icon" style={{ fill: "#CD6799" }}></FaSass>
+              <label className="text">SASS</label>
             </div>
             <div className="gridItem">
               <IoLogoJavascript
                 className="icon"
                 style={{ fill: "#F0DB4F" }}
               ></IoLogoJavascript>
-              <h6 className="text">Javascript</h6>
+              <label className="text">Javascript</label>
             </div>
             <div className="gridItem">
               <SiApollographql
                 className="icon"
                 style={{ fill: "#78639a" }}
               ></SiApollographql>
-              <h6 className="text">Apollo</h6>
+              <label className="text">Apollo</label>
             </div>
             <div className="gridItem">
               <SiRedux className="icon" style={{ fill: "#764abc" }}></SiRedux>
-              <h6 className="text">Redux</h6>
+              <label className="text">Redux</label>
             </div>
             <div className="gridItem">
               <FaNodeJs className="icon" style={{ fill: "#215732" }}></FaNodeJs>
-              <h6 className="text">Node.js</h6>
+              <label className="text">Node.js</label>
             </div>
             <div className="gridItem">
               <SiGraphql
                 className="icon"
                 style={{ fill: "#e535ab" }}
               ></SiGraphql>
-              <h6 className="text">GraphQL</h6>
+              <label className="text">GraphQL</label>
             </div>
             <div className="gridItem">
               <SiMongodb
                 className="icon"
                 style={{ fill: "#4DB33D" }}
               ></SiMongodb>
-              <h6 className="text">mongoDB</h6>
+              <label className="text">mongoDB</label>
+            </div>
+            <div className="gridItem">
+              <FaGithub className="icon" style={{ fill: "#fafafa" }}></FaGithub>
+              <label className="text">Github</label>
+            </div>
+            <div className="gridItem">
+              <FaGitAlt className="icon" style={{ fill: "#F1502F" }}></FaGitAlt>
+              <label className="text">Git</label>
+            </div>
+            <div className="gridItem">
+              <TbBrandVscode
+                className="icon"
+                style={{ fill: "#0078d7" }}
+              ></TbBrandVscode>
+              <label className="text">VS Code</label>
             </div>
           </motion.div>
         </div>
