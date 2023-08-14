@@ -113,6 +113,9 @@
         flex-direction: column;
         gap: 1.5rem;
 
+        h1 {
+          font-size: 6rem;
+        }
         .title {
           color: var(--grey);
           display: inline;

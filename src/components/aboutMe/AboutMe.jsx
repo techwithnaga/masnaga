@@ -27,9 +27,9 @@ const AboutMe = () => {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <motion.h5 className="title">
+            <motion.h4 className="title">
               <span className="number">01.</span>About Me
-            </motion.h5>
+            </motion.h4>
             <div className="line"></div>
           </motion.div>
 
