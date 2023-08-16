@@ -1,5 +1,5 @@
 import React from "react";
-import cinchyLogo from "../../img/cinchy_life_logo.png";
+
 import {
   VerticalTimeline,
   VerticalTimelineElement,
