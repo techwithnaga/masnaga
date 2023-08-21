@@ -61,7 +61,7 @@ const Navbar = () => {
                 transition={{ delay: 4.5, duration: 0.7 }}
               >
                 <label className="number">05. </label>
-                Testimonial
+                Contact
               </motion.li>
             </ul>
           </div>

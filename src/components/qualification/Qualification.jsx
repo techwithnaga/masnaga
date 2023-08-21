@@ -26,22 +26,47 @@ const Qualification = () => {
 
         <div className="contentWrapper">
           <div className="item">
-            <div className="itemHeader">
+            <motion.div
+              initial={{ y: 70, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="itemHeader"
+            >
               <FaUserGraduate className="icon"></FaUserGraduate>
               <h6 style={{ fontFamily: "var(--font-mono)" }}>
                 Where I've studied
               </h6>
-            </div>
+            </motion.div>
             <div className="itemContentWrapper">
-              <div className="left">
-                <div className="icon">
+              <motion.div
+                initial={{ height: 0, opacity: 1 }}
+                whileInView={{ height: "100%", opacity: 1 }}
+                transition={{ duration: 0.7, delay: 0.5 }}
+                className="left"
+              >
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ scale: [0, 1.3, 1], opacity: 1 }}
+                  transition={{ duration: 0.7, delay: 1 }}
+                  className="icon"
+                >
                   <img src={depaulIcon} alt="depaul icon" />
-                </div>
-                <div className="icon2">
+                </motion.div>
+                <motion.div
+                  className="icon2"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ scale: [0, 1.3, 1], opacity: 1 }}
+                  transition={{ duration: 0.7, delay: 1 }}
+                >
                   <img src={iitLogo} alt="iit Logo" />
-                </div>
-              </div>
-              <div className="right">
+                </motion.div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ x: [70, -10, 0], opacity: 1 }}
+                transition={{ duration: 0.7, delay: 1 }}
+                className="right"
+              >
                 <div className="schoolContent">
                   <div className="triangle"></div>
                   <h6>Depaul University</h6>
@@ -65,30 +90,55 @@ const Qualification = () => {
 
                   <label>GPA 3.6/4.0</label>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
           <div className="item">
-            <div className="itemHeader">
+            <motion.div
+              initial={{ y: 70, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="itemHeader"
+            >
               <FaToolbox className="icon"></FaToolbox>
               <h6 style={{ fontFamily: "var(--font-mono)" }}>
                 Where I've worked
               </h6>
-            </div>
+            </motion.div>
             <div className="itemContentWrapper">
-              <div className="left">
-                <div className="icon">
+              <motion.div
+                initial={{ height: 0, opacity: 1 }}
+                whileInView={{ height: "100%", opacity: 1 }}
+                transition={{ duration: 0.7, delay: 0.5 }}
+                className="left"
+              >
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ scale: [0, 1.3, 1], opacity: 1 }}
+                  transition={{ duration: 0.7, delay: 1 }}
+                  className="icon"
+                >
                   <img src={cinchyLogo} alt="depaul icon" />
-                </div>
-                <div className="icon4">
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ scale: [0, 1.3, 1], opacity: 1 }}
+                  transition={{ duration: 0.7, delay: 1 }}
+                  className="icon4"
+                >
                   <img src={uofcLogo} alt="iit Logo" />
-                </div>
-              </div>
-              <div className="right">
+                </motion.div>
+              </motion.div>
+              <motion.div
+                className="right"
+                initial={{ opacity: 0 }}
+                whileInView={{ x: [70, -10, 0], opacity: 1 }}
+                transition={{ duration: 0.7, delay: 1 }}
+              >
                 <div className="schoolContent">
                   <div className="triangle"></div>
                   <h6>
-                    Software Engineer{" "}
+                    Software Engineer
                     <span>
                       <a
                         href="https://www.cinchy.life/"
@@ -141,26 +191,20 @@ const Qualification = () => {
                   </div>
                   <ul className="list">
                     <li>
-                      Manage construction project management services for
-                      capital construction projects by managing cost, scope,
-                      schedule, resources, and risk.
+                      Built and delivered technical solutions according to
+                      stakeholder business requirements. Provide project
+                      controls by updating ledger software to monitor invoice
+                      and expenses.
                     </li>
+
                     <li>
                       Identify risk to construction project delivery and develop
-                      mitigating strategies to avoid potential negative
-                      outcomes.
-                    </li>
-                    <li>
-                      Built and delivered technical solutions according to
-                      stakeholder business requirements
-                    </li>
-                    <li>
-                      Provide construction project controls by updating ledger
-                      software to monitor invoice and expenses.
+                      mitigating strategies to avoid potential negative outcomes
+                      by managing cost, scope, and schedule
                     </li>
                   </ul>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

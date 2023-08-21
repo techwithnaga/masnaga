@@ -1,0 +1,13 @@
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  color: var(--grey);
+
+  label {
+    font-family: var(--font-mono);
+    font-size: 14px;
+  }
+}
