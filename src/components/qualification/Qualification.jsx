@@ -10,7 +10,7 @@ import uofcLogo from "../../img/uofcLogo.svg";
 
 const Qualification = () => {
   return (
-    <div className="qualification">
+    <div className="qualification" id="qualification">
       <div className="qualificationContainer">
         <motion.div
           className="header"
