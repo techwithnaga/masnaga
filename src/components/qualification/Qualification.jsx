@@ -62,7 +62,7 @@ const Qualification = () => {
                 </motion.div>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0 }}
+                initial={{ x: 70, opacity: 0 }}
                 whileInView={{ x: [70, -10, 0], opacity: 1 }}
                 transition={{ duration: 0.7, delay: 1 }}
                 className="right"
