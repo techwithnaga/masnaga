@@ -9,6 +9,7 @@ import diploma from "../../img/diploma.svg";
 import thumbup from "../../img/thumbup.png";
 import { init } from "ityped";
 import { motion } from "framer-motion";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 
@@ -94,14 +95,16 @@ const Intro = () => {
           </div>
 
           <div className="buttonContainer">
-            <motion.button
-              className="goldButton"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 5.9 }}
-            >
-              About Me
-            </motion.button>
+            <Link to="aboutme" spy={true} smooth={true} duration={700}>
+              <motion.button
+                className="goldButton"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 5.9 }}
+              >
+                About Me
+              </motion.button>
+            </Link>
           </div>
 
           {/* <button className="button introButton"> Hire Me</button> */}

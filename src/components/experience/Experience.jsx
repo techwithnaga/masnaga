@@ -17,9 +17,9 @@ const Experience = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <motion.h5 className="title">
+          <h5 className="title">
             <span className="number">02.</span>Where I've Worked
-          </motion.h5>
+          </h5>
           <div className="line"></div>
         </motion.div>
         <VerticalTimeline>

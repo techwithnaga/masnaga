@@ -4,6 +4,116 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  .contactContaier {
+  .contactContainer {
+    padding: 20px;
+    width: 80vw;
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .title {
+        font-family: var(--font-mono);
+        color: var(--lightGrey);
+
+        .number {
+          margin-right: 10px;
+          color: var(--gold);
+        }
+      }
+      .line {
+        height: 1px;
+        flex: 2;
+        margin-left: 10px;
+        background-color: var(--darkGrey);
+        opacity: 0.6;
+      }
+    }
+
+    .contentContainer {
+      display: flex;
+
+      .left {
+        flex: 1;
+        padding: 45px;
+
+        .buttonWrapper {
+          margin-top: 50px;
+          height: 100px;
+
+          .goldButton {
+          }
+        }
+      }
+      .right {
+        flex: 1;
+        padding: 45px;
+        border-left: 1px solid var(--darkGrey);
+
+        .formWrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          .buttonWrapper {
+            margin-top: 30px;
+
+            .greyButton {
+              border: 1px solid var(--darkGrey);
+              border-radius: 5px;
+              width: 100%;
+              font-family: var(--font-mono);
+              padding: 12px 0;
+              cursor: pointer;
+              font-size: 17px;
+
+              &:hover {
+                color: var(--gold);
+                border: 1px solid var(--gold);
+              }
+            }
+          }
+
+          .MuiFormControl-root {
+            border-bottom: 1px solid var(--grey);
+          }
+
+          .MuiInputBase-root {
+            background-color: var(--darkGreyTransparent);
+            color: var(--darkWhite);
+          }
+          .MuiFormLabel-root {
+            background-color: transparent;
+            color: var(--grey);
+            font-family: var(--font-mono);
+            font-size: 17px;
+          }
+          .Mui-focused {
+            color: var(--gold);
+          }
+
+          .formItem {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+          }
+
+          .name {
+            display: flex;
+            gap: 20px;
+          }
+
+          .textArea {
+            .MuiInputBase-root {
+              height: 100px;
+            }
+          }
+
+          .sendButton {
+            margin-top: 30px;
+          }
+        }
+      }
+    }
   }
 }

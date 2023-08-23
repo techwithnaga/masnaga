@@ -28,7 +28,8 @@ const Navbar = () => {
     };
   }, [lastScrollY]);
   return (
-    <nav className={`${showNavbar} ? "navBar" : "navBar hide"`}>
+    // <nav className={`${showNavbar} ? "navBar" : "navBar hide"`}>
+    <nav className="navBar">
       <div className="navbarContainer">
         <div className="navbarLeft">
           <motion.img

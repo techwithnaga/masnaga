@@ -34,6 +34,7 @@
   --lightGrey: #b0b7c2;
   --grey: #97a0af;
   --darkGrey: #4e5665;
+  --darkGreyTransparent: rgba(78, 86, 101, 0.1);
 }
 
 * {
@@ -91,11 +92,11 @@ body {
 }
 
 .goldButton:hover {
-  transform: translate(-5px, -5px);
+  transform: translate(-4px, -4px);
   border-bottom: 2px solid var(--gold);
-  box-shadow: 10px 10px 5px 0px rgba(194, 136, 43, 0.75);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(194, 136, 43, 0.75);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(194, 136, 43, 0.75);
+  box-shadow: 5px 5px 3px 0px rgba(255, 221, 67, 0.75);
+  -webkit-box-shadow: 5px 5px 3px 0px rgba(255, 221, 67, 0.75);
+  -moz-box-shadow: 5px 5px 3px 0px rgba(255, 221, 67, 0.75);
 }
 
 h1 {
