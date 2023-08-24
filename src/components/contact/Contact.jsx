@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./contact.scss";
-import { motion } from "framer-motion";
+import { color, motion } from "framer-motion";
 import TextField from "@mui/material/TextField";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useForm } from "react-hook-form";
+import emailjs from "emailjs-com";
+import { ClipLoader } from "react-spinners";
 
 const Contact = () => {
   const theme = createTheme({
@@ -15,39 +17,81 @@ const Contact = () => {
     },
   });
 
+  const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
+
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({ mode: "all" });
 
   const onSubmit = (data) => {
-    console.log(data);
+    setLoading(true);
+    emailjs
+      .send("techwithnaga", "template_x26fpux", data, "C8V7M-Us8IHcCRyL_")
+      .then(
+        function (response) {
+          // console.log("SUCCESS!", response.status, response.text);
+          setLoading(false);
+          setSuccess(true);
+          reset();
+        },
+        function (err) {
+          console.log("FAILED...", err);
+          setLoading(false);
+        }
+      );
   };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setSuccess(false);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [success]);
 
   return (
     <div className="contact" id="contact">
       <div className="contactContainer">
-        <div className="header">
+        <motion.div
+          className="header"
+          initial={{ y: 70, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           <h5 className="title">
-            <span className="number">05.</span>Let's Connect
+            <span className="number">05.</span>
+            What's next?
           </h5>
           <div className="line"></div>
-        </div>
+        </motion.div>
 
         <div className="contentContainer">
-          <div className="left">
+          <motion.div
+            className="left"
+            initial={{ x: -800, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.75 }}
+          >
             <p>
-              What are your thoughts? My inbox is always open. Whether you have
-              a question or just want to say hi. I will get back to you at my
-              earliest convenience.
+              Let's connect! Whether you have a question or just want to say hi.
+              My inbox is always open. I will get back to you at my earliest
+              convenience.
             </p>
             <div className="buttonWrapper">
-              <button className="goldButton">Say Hello</button>
+              <a className="email" href="mailto:techwithnaga@gmail.com">
+                <button className="goldButton">Say Hello</button>
+              </a>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="right">
+          <motion.div
+            className="right"
+            initial={{ x: 800, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
             <form onSubmit={handleSubmit(onSubmit)}>
               <ThemeProvider theme={theme}>
                 <div className="formWrapper">
@@ -96,7 +140,7 @@ const Contact = () => {
                     </label>
                   </div>
 
-                  <div className="formItem">
+                  <div className="formItem" style={{ height: "250px" }}>
                     <TextField
                       id="filled-basic"
                       label="Message"
@@ -112,17 +156,37 @@ const Contact = () => {
                     <label style={{ color: "red" }}>
                       {errors.message?.message}
                     </label>
+                    {success && (
+                      <label style={{ color: "limegreen" }}>
+                        Thank you. I have received your message. I will get back
+                        to you shortly.
+                      </label>
+                    )}
                   </div>
 
                   <div className="buttonWrapper">
-                    <button className="greyButton" type="submit">
-                      Send Message
-                    </button>
+                    {loading ? (
+                      <button className="greyButton" type="submit">
+                        {" "}
+                        <ClipLoader
+                          color="#97a0af"
+                          s
+                          size={18}
+                          aria-label="Loading Spinner"
+                          data-testid="loader"
+                          className="loader"
+                        />
+                      </button>
+                    ) : (
+                      <button className="greyButton" type="submit">
+                        Send Message
+                      </button>
+                    )}
                   </div>
                 </div>
               </ThemeProvider>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

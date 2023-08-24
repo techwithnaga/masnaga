@@ -1,0 +1,74 @@
+.blogCard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  border: 1px solid var(--darkGrey);
+  overflow: hidden;
+
+  .blogImgContainer {
+    height: 200px;
+
+    .blogImg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .title {
+      height: 55px;
+      cursor: pointer;
+      //   border: 1px solid red;
+    }
+
+    .time {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      .dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: var(--grey);
+      }
+    }
+
+    .author {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      .profilePic {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: 1px solid var(--gold);
+        object-fit: cover;
+      }
+    }
+
+    .tags {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .tag {
+        padding: 2px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--darkGrey);
+        border-radius: 2px;
+        color: var(--darkWhite);
+        cursor: pointer;
+      }
+    }
+  }
+}

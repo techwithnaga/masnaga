@@ -115,7 +115,7 @@ const Intro = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 7 }}
         >
-          <a className="email" href="mailto:techwithnaga@gmail">
+          <a className="email" href="mailto:techwithnaga@gmail.com">
             techwithnaga@gmail.com
           </a>
           <div className="line"></div>
