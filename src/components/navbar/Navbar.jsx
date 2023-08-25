@@ -11,8 +11,10 @@ const Navbar = () => {
   const controlNavbar = () => {
     if (window.scrollY < lastScrollY) {
       setShowNavbar(true);
+      console.log(showNavbar);
     } else {
       setShowNavbar(false);
+      console.log(showNavbar);
     }
 
     setLastScrollY(window.scrollY);
@@ -27,9 +29,9 @@ const Navbar = () => {
       window.removeEventListener("scroll", controlNavbar);
     };
   }, [lastScrollY]);
+  useEffect(() => {}, [showNavbar]);
   return (
-    // <nav className={`${showNavbar} ? "navBar" : "navBar hide"`}>
-    <nav className="navBar">
+    <nav className={showNavbar ? "navBar" : "navBar hide"}>
       <div className="navbarContainer">
         <div className="navbarLeft">
           <motion.img

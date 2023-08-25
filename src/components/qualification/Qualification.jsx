@@ -62,9 +62,9 @@ const Qualification = () => {
                 </motion.div>
               </motion.div>
               <motion.div
-                initial={{ x: 70, opacity: 0 }}
-                whileInView={{ x: [70, -10, 0], opacity: 1 }}
-                transition={{ duration: 0.7, delay: 1 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ x: [300, -10, 0], opacity: 1 }}
+                transition={{ duration: 0.75, delay: 1 }}
                 className="right"
               >
                 <div className="schoolContent">
@@ -132,7 +132,7 @@ const Qualification = () => {
               <motion.div
                 className="right"
                 initial={{ opacity: 0 }}
-                whileInView={{ x: [70, -10, 0], opacity: 1 }}
+                whileInView={{ x: [300, -10, 0], opacity: 1 }}
                 transition={{ duration: 0.7, delay: 1 }}
               >
                 <div className="schoolContent">

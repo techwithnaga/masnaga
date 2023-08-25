@@ -3,14 +3,19 @@
 //   height: 0;
 //   color: red;
 // }
+
 .navBar {
   display: flex;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   background-color: transparent;
   width: 100%;
   z-index: 3;
+
+  &.hide {
+    display: none;
+  }
 
   .navbarContainer {
     width: 100%;
